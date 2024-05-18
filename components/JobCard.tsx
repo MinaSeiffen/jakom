@@ -6,10 +6,11 @@ import { Button } from "./ui/button";
 interface Props {
   title: string;
   location: string;
-  workType: "Part Time" | "Full Time";
+  workType: string;
+  locale:string
 }
 
-const JobCard = ({ title, location, workType }: Props) => {
+const JobCard = ({ title, location, workType , locale }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
@@ -47,19 +48,18 @@ const JobCard = ({ title, location, workType }: Props) => {
                 isHovered ? "text-white" : "text-[#404042]"
               }`}
             >
-              It is a long established fact that a reader will be distracted by
-              the readable.
+              {locale === 'ar' ? "إنها حقيقة مثبتة منذ زمن طويل أن ما يمكن قراءته سيلهي القارئ" : 'It is a long established fact that a reader will be distracted by the readable'}
             </p>
           </div>
         </div>
         <Button
-          className={`lg:w-[156px] font-sans lg:h-[51px] lg:mt-[60px] max-lg:mt-[20px] max-lg:mx-[72.5px] bg-custom-gradient-4 font-bold ${
+          className={`lg:w-[156px] max-lg:w-[136px] font-sans lg:h-[51px] lg:mt-[60px] max-lg:mt-[20px] max-lg:mx-[76.5px] bg-custom-gradient-4 font-bold ${
             isHovered
               ? "bg-white text-[#404042]"
               : "bg-custom-gradient-4 text-white"
           } hover:bg-white`}
         >
-          Apply Now
+          {locale === 'ar' ? 'قدم الان' : 'Apply Now'} 
         </Button>
       </div>
     </div>

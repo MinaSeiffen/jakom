@@ -4,9 +4,10 @@ import React from "react";
 interface Props {
   imgSrc: string;
   title: string;
+  locale: string;
 }
 
-const CareerValueCard = ({ imgSrc, title }: Props) => {
+const CareerValueCard = ({ imgSrc, title , locale}: Props) => {
   return (
     <div className="lg:w-[452px] mx-auto max-lg:mb-[30px] max-lg:w-[301px] max-lg:h-[474px] lg:h-[415px] rounded-[40px] border py-[52px] px-[51px] bg-[#FFFFFF] border-[#F6F6F6] lg:mx-auto shadow-custom-shadow-1">
       <div className="flex flex-col max-lg:gap-y-[38px] lg:gap-y-[38px] max-lg:w-[205px] max-lg:h-[370px] max-lg:mx-auto">
@@ -24,7 +25,7 @@ const CareerValueCard = ({ imgSrc, title }: Props) => {
             {title}
           </h1>
           <p className="lg:w-[350px] lg:h-[105px] font-nunito font-normal text-[22px] leading-[34.63px] text-[#797979]">
-          Contrary to popular belief, Ipsum is not simply random text. It has roots in a piece.
+          {locale === 'ar' ? 'خلافًا للاعتقاد الشائع، فإن إيبسوم ليس مجرد نص عشوائي. لها جذور في قطعة' : 'Contrary to popular belief, Ipsum is not simply random text. It has roots in a piece.'} 
           </p>
         </div>
       </div>

@@ -16,6 +16,8 @@ type Props = {
 
 const About: React.FC<Props> = ({ params: {locale}}) => {
   const [t, setT] = useState<(key: string) => string>(() => (key:any) => key)
+  const [isHovered , setIsHovered] = useState(false)
+
   useEffect(() => {
     const init = async () => {
       const { t } = await initTranslations({ locale, namespaces: ['about'] });
@@ -24,7 +26,7 @@ const About: React.FC<Props> = ({ params: {locale}}) => {
 
     init();
   }, [locale]);
-  const [isHovered , setIsHovered] = useState(false)
+
   return (
     <>
       <div className="flex flex-col mx-auto lg:w-[1200px] h-[1087px] mt-[103px] rounded-[42px]" dir={locale === "ar" ? "rtl" : "ltr"}>
