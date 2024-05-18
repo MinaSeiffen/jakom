@@ -27,8 +27,13 @@ const config = {
         'custom-gradient': 'linear-gradient(125.46deg, #D91C5C -34.78%, #2B388F 106.88%)',
         'custom-gradient-1': 'linear-gradient(45deg, #D91C5C -34.78%, #2B388F 106.88%)',
         'custom-gradient-2': 'linear-gradient(125.46deg, #D91C5C -34.78%, #2B388F 106.88%)',
+        'custom-gradient-3': 'linear-gradient(291.29deg, #2B388F -6.17%, #D91C5C 94.88%)',
+        'custom-gradient-4': 'linear-gradient(280.13deg, #2B388F -3.31%, #D91C5C 105.23%)',
+        'radial-gradient': 'radial-gradient(100% 256% at 0% 100%, #ECF2FF 0%, #FFFFFF 100%)',
       },
       boxShadow: {
+        'custom-shadow-1': '1px 15px 23px 0px #E5E5E540',
+        'custom-shadow-2': '3px 10px 10px 0px #CACACA40',
         'custom-shadow-3': '3px 7px 7px 0px rgba(202, 202, 202, 0.25)',
         'custom-shadow-4': '-4px 8px 8px 0px rgba(154, 154, 154, 0.25)',
       },
